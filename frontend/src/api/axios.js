@@ -1,10 +1,9 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://college-placement-portal-fullstack.onrender.com',
+  baseURL: 'https://college-placement-portal-fullstack.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
-
 // Inject JWT token on every request
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('access_token');
